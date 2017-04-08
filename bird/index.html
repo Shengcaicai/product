@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{padding:0;margin:0;}
+        #outer{position: absolute; width:500px;height:600px;left: 30%;top:10%;border:1px solid #71c5cf;background: #70c5ce;}
+        img{width: 20%;height: 15%;}
+        /*#bird{width:200px;}*/
+        .image{position: absolute;top:200px;text-align: center;}
+
+    </style>
+</head>
+
+<body>
+   <div id="outer">
+       <div class="image" id="bird" >
+          <img src="image/7ff392e1331b8e917d162fb4dec22499.gif" name="bird">
+       </div>
+   </div>
+   <script>
+       document.getElementById('outer').onclick=function() {
+           fly('bird');
+           fall('bird');
+       };
+       document.onkeydown=function(event) {
+           var e = event || window.event || arguments.callee.caller.arguments[0];
+           if (e && e.keyCode == 32) {
+               fly('bird');
+               fall('bird');
+           }
+       };
+       var fly_height=0; //飞起的高度
+       var flying=0;//正在飞
+       var now_height;//当前高度
+           function fly(objID)
+           {
+               var height;
+               if(flying==1){
+                   height=now_height;
+                   console.log("now"+height);
+               }else {
+                   obj=document.getElementById(objID);
+                   height=obj.offsetHeight;
+               }
+               fly_height+=10;
+               now_height=height-fly_height;
+               obj.style.marginTop=now_height+'px';
+               if(height<fly_height){
+                   fly_height=0;
+                   flying=0;
+                   fall(objID);
+                   return;
+               }
+               flying=1;
+               setTimeout("fly('"+objID+"')", 50);
+           }
+           //掉下
+       var fall_height=0; //掉下的高度
+            function fall(objID) {
+                if(flying==1){
+                    return
+                }
+                now_height=now_height+fall_height+10;
+                obj.style.marginTop=now_height+'px';
+                if(now_height>280){
+                    alert("bye bye~");
+                    return;
+                }
+                setTimeout("fall('"+objID+"')", 50);
+            }
+   </script>
+</body>
+</html>
