@@ -20,7 +20,13 @@
        </div>
    </div>
    <script>
-       document.onclick=function() {
+       var object = document.getElementById('outer');
+       object.addEventListener('touchstart', function(event) {
+           fly('bird');
+           fall('bird');
+
+       }, false);
+       document.onclick=function () {
            fly('bird');
            fall('bird');
        };
