@@ -9,44 +9,46 @@
         .bird {width:24%;}
     </style>
     <script>
-        var isfalling = 0;
+        var isFalling=0;
         document.onclick = function(){
-
-
-            console.log(isfalling);
-            if(isfalling == 0){
+            if(isFalling==0){
                 fall();
             }
             fly();
-
         };
 
-        var fly =function()
-
-        {
-            var obj = document.getElementById("birdBody");
-            obj.style.top = nowHeight +"px";
-            nowHeight = nowHeight-100;
-
-            if(nowHeight <100){
-                nowHeight = 100;
-            }
-        }
-
-
         var nowHeight = 250;
-        var fall = function(){
-            isfalling= 1;
+        var fly = function(){
             var obj = document.getElementById("birdBody");
-            obj.style.top = nowHeight +"px";
-            nowHeight = nowHeight+10;
+            console.log(obj);
+            nowHeight=nowHeight-100;
+            if(nowHeight<0){
+                nowHeight=0;
+            }
+            obj.style.top=nowHeight+"px";
+        };
 
-            if(nowHeight>560){
-                isfalling = 0;
+
+        var fall = function(){
+            console.log(nowHeight);
+            isFalling=1;
+            var obj = document.getElementById("birdBody");
+            console.log(obj);
+            nowHeight=nowHeight+5;
+            obj.style.top=nowHeight+"px";
+            if(nowHeight > 560){
+                isFalling=0;
                 return;
             }
-         setTimeout("fall()",25);
+
+            setTimeout("fall()",25);
         }
+
+
+
+
+
+
     </script>
 </head>
 
