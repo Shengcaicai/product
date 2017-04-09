@@ -1,61 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
     <title>Title</title>
     <style>
-        #outer{border:1px solid #70c5ce; width:500px;height:600px;margin:48px auto;background-color:#70c5ce;}
-        .birdBody{position: absolute;  top: 250px; left: 44%; }
-        .bird {width:24%;}
+        body{border:1px solid #70c5ce; width:500px;height:600px;margin:48px auto;background-color:#70c5ce;}
+        .birdBody{position: absolute;  top: 250px; left: 44%; z-index: 1}
+        .bird {width:38%;}
+        .shuiguan{position: absolute; top:0px;z-index:2;right: 300px;height: 202px}
+        .shuiguan img{width: 74px;}
+        .shuiguan_bottom{transform: rotate(180deg);position: absolute;bottom: 109px;z-index:2;}
+        .shuiguan_bottom img{width: 74px;}
     </style>
     <script>
-        var isfalling = 0;
+        var gameRunning = 0;
+        var isMoving=0;
         document.onclick = function(){
-
-
-            console.log(isfalling);
-            if(isfalling == 0){
+            if(gameRunning == 0){
                 fall();
             }
-            fly();
-
-        };
-
-        var fly =function()
-
-        {
-            var obj = document.getElementById("birdBody");
-            obj.style.top = nowHeight +"px";
-            nowHeight = nowHeight-100;
-
-            if(nowHeight <100){
-                nowHeight = 100;
+            if(isMoving == 0){
+                pipeTopMove();
+                pipeBottomMove();
             }
-        }
-
-
-        var nowHeight = 250;
-        var fall = function(){
-            isfalling= 1;
+            fly();
+            touch();
+        };
+        //小鸟-------------start-------------
+         var nowHeight = 250;
+         var fly =function()
+         {
             var obj = document.getElementById("birdBody");
             obj.style.top = nowHeight +"px";
-            nowHeight = nowHeight+10;
+            nowHeight = nowHeight-40;
+            var maxFlyHeight = 0;
+            if(nowHeight < maxFlyHeight){
+                nowHeight = maxFlyHeight;
+            }
+        };
+        var fall = function(){
+            gameRunning= 1;
+            var obj = document.getElementById("birdBody");
+            obj.style.top = nowHeight +"px";
+            nowHeight = nowHeight+1;
 
-            if(nowHeight>560){
-                isfalling = 0;
+            if(nowHeight>470){
+                gameRunning = 0;
                 return;
             }
-         setTimeout("fall()",25);
+         setTimeout("fall()",1);
+        };
+        //小鸟-------------end----------------
+
+
+        //水管-------------start-------------
+        var movingSpeed=5;//移动速度
+        var maxRight=700;//移动最大距离
+        var topPipeHeight=0;//顶部图片高度
+        var nowRight=0;
+        var pipeTopMove = function () {
+            isMoving=1;
+            var obj=document.getElementById("pipe");
+            nowRight+=1;
+            obj.style.right=nowRight+"px";
+            if(nowRight>maxRight){
+                var objPipe=document.getElementById("pipe_img");
+                topPipeHeight=GetRandomHeight();
+                objPipe.height=topPipeHeight;
+                //随机后移动
+                nowRight = GetRandomPipe();
+                if(nowHeight>350){
+                    nowHeight=350
+                }
+            }
+            setTimeout("pipeTopMove()",movingSpeed)
+        };
+
+        var nowRightBottom=0;
+        var pipeBottomMove = function () {
+            isMoving=1;
+            var obj=document.getElementById("pipe_bottom");
+            nowRightBottom+=1;
+            obj.style.right=nowRightBottom+"px";
+            if(nowRightBottom>maxRight){
+                var objPipe=document.getElementById("pipe_bottom_img");
+                objPipe.height=600-topPipeHeight-150;
+                nowRightBottom = GetRandomPipe();
+            }
+            setTimeout("pipeBottomMove()",movingSpeed)
+        };
+
+        /**
+         * @return 水管随机的间隔
+         */
+        function GetRandomPipe()
+        {
+            var movingSpace=200;
+            return 50 - random(0,movingSpace);
         }
+        /**
+         * @return 随机数
+         */
+        function random(Min,Max) {
+            var Range = Max - Min;
+            var Rand = Math.random();
+            return (Min + Math.round(Rand * Range));
+        }
+
+        /**
+         * @return 水管随机长度
+         */
+        function GetRandomHeight() {
+            var minheight=100;
+            var maxheight=400;
+            return random(minheight,maxheight);
+        }
+        //水管-------------end-------------
+
+        //检查碰撞----------------
+        var touch = function(){
+            if(gameRunning==1){
+                if(nowRight>74&&nowRight<193 &&nowHeight-topPipeHeight<11){
+                    gameRunning=0;
+                    alert("fuck");
+                    return;
+                }
+                setTimeout("touch()",5);
+            }
+        }
+
     </script>
 </head>
 
-
-<body>
-<div id="outer">
+<body onselectstart="return false">
+    <div class="shuiguan" id="pipe">
+        <img src="image/shuiguan.png" id="pipe_img">
+    </div>
     <div class="birdBody" id="birdBody">
         <img class="bird"  src="image/bird.gif">
     </div>
-</div>
+    <div class="shuiguan_bottom" id="pipe_bottom">
+        <img src="image/shuiguan.png" width="88px" id="pipe_bottom_img">
+    </div>
 </body>
 </html>
