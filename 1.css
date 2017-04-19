@@ -49,9 +49,6 @@ nav a:hover{
 }
 
 
-#section_4 img{
-    opacity: 0.6;
-}
 
 
 p.grey{
@@ -96,7 +93,7 @@ p.span_2{
 #section_4{
     margin-top: 33px;
     width: 100%;
-    height: 350px;
+    height: 370px;
     padding-top: 99px;
     background-color: #b3e0d3;
 }
@@ -112,9 +109,10 @@ p.span_2{
 
 }
 
-.green-pic{
-    width:44px;
-    margin-left: 143px;
+.green-pic {
+    width: 155px;
+    margin-left: 98px;
+    margin-top: 54px;
 }
 
 
@@ -127,6 +125,10 @@ p.span_2{
     margin-right:10px;
 }
 
+.col-xs-5{
+    text-align: center;
+}
+
 
 
 p.span_4{
@@ -134,12 +136,20 @@ p.span_4{
     text-align: center;
 }
 
-ul.list{
-    margin-top: 20px;
-    margin-left: 111px;
+p.span_5{
+    color: #635d5d;
+    padding-top: 18px;
+    font-size: 13px;
+    text-align: left;
+    margin-left: 70px;
+    margin-top: 12px;
 }
 
+#section_5{
+    margin-top:20px;
+}
 
-li.list-1{
-    padding-right: 149px;
+h3{
+    padding-top: 151px;
+    margin-right: 391px;
 }
