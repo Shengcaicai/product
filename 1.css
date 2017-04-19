@@ -47,7 +47,6 @@ nav a:hover{
 
 #section_1{
     border-bottom: 1px solid #ccc ;
-
 }
 
 
@@ -81,4 +80,11 @@ p.grey{
     padding-left: 5px;
 }
 
+#section_3{
+    border-bottom: 1px solid #ccc ;
+    margin-top：20px;
+}
 
+p.span_2{
+    font-size:20px;
+}
