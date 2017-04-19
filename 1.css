@@ -154,3 +154,11 @@ h3{
     margin-top: -20px;
     margin-bottom: 10px;
 }
+
+#section_6{
+    border-bottom: 1px solid #ccc ;
+}
+
+.col-xs-4 img{
+    margin-top:20px;
+}
