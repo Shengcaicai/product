@@ -13,7 +13,7 @@
 nav{
     float: right;
     margin-top: -44px;
-    margin-right: -20px;
+    margin-right: -45px;
 }
 
 ul{
@@ -46,13 +46,28 @@ nav a:hover{
 }
 
 #section_1{
-
+    border-bottom: 1px solid #ccc ;
 
 }
 
 .section1{
-
+    text-align: center;
     color:#928d8d;
     font-size:25px;
     padding-top:20px;
+
 }
+
+#section_2{
+    margin-top:30px;
+}
+
+.row{
+    padding-top:10px;
+}
+
+
+.col-xs-3 img:hover{
+    opacity: 0.6;
+ }
+
