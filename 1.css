@@ -63,7 +63,7 @@ p.grey{
 }
 
 #section_2{
-    margin-top:30px;
+    margin-top:40px;
 }
 
 .row{
@@ -82,9 +82,17 @@ p.grey{
 
 #section_3{
     border-bottom: 1px solid #ccc ;
-    margin-top：20px;
+    margin-top：40px;
 }
 
 p.span_2{
     font-size:20px;
+}
+
+#section_4{
+    margin-top:40px;
+}
+
+.col-xs-10{
+    background-color:#e5f1d7;
 }
