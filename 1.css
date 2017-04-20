@@ -218,3 +218,36 @@ p.span_7{
     left: 47%;
     right: 50%;
 }
+
+.span_12{
+    color:greenyellow;
+    text-align: center;
+    margin-top:20px;
+    font-size:80px;
+}
+
+.pink-pic{
+    margin-top:-5px;
+}
+
+
+.img_one_1
+{
+    background: #E1ABC3;
+    opacity: 0.5;
+    width: 418px;
+    height: 961px;
+    padding: 0;
+    margin-top: -961px;
+}
+
+.img_one_2
+{
+    background: #E1ABC3;
+    opacity: 0.5;
+    width: 418px;
+    height: 961px;
+    padding: 0;
+    margin-left: 1022px;
+    margin-top: -961px;
+}
