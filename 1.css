@@ -166,9 +166,6 @@ h3{
     border-bottom: 1px solid #ccc ;
 }
 
-.col-xs-4 img{
-    margin-top:20px;
-}
 
 #section_7{
     background-color: #d2f1c8;
@@ -191,6 +188,10 @@ h3{
     margin-top:15px;
     text-align: center;
 }
-.col-xs-4{
-    margin-top:10px;
+.col-xs-4 img{
+    margin-top:-6px;
+}
+
+#section_9{
+    margin-top:-5px;
 }
