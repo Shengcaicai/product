@@ -220,34 +220,20 @@ p.span_7{
 }
 
 .span_12{
-    color:greenyellow;
+    color: #060606;
     text-align: center;
-    margin-top:20px;
-    font-size:80px;
+    margin-top: -800px;
+    font-size: 177px;
 }
 
 .pink-pic{
     margin-top:-5px;
+    opacity: 0.6;
 }
 
-
-.img_one_1
-{
-    background: #E1ABC3;
-    opacity: 0.5;
-    width: 418px;
-    height: 961px;
-    padding: 0;
-    margin-top: -961px;
-}
-
-.img_one_2
-{
-    background: #E1ABC3;
-    opacity: 0.5;
-    width: 418px;
-    height: 961px;
-    padding: 0;
-    margin-left: 1022px;
-    margin-top: -961px;
+.span_13{
+    color: #060606;
+    text-align: center;
+    margin-top: 29px;
+    font-size: 57px;
 }
