@@ -37,6 +37,11 @@
     color:black;
 }
 
+.img-responsive{
+    width:100%;
+}
+
+
 #pink {
     height: 600px;
     width: 100%;
