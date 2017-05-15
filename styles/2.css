@@ -36,7 +36,7 @@
 #header nav li a{
     text-decoration: none;
     color:#928d8d;
-    font-size:16px;
+    font-size:1.5em;
 }
 
 #header nav  li  a:hover{
@@ -50,7 +50,7 @@
 
 
 .welcome{
-    font-size: 39px;
+    font-size: 1.5em;
     margin-top: -463px;
     color: #fff;
     text-align: center;
@@ -58,7 +58,7 @@
 
 
 .intro{
-    width: 400px;
+    width: 30%;
     border-top: 1px solid #f8f8f8;
     border-bottom: 1px solid #fff;
     position: relative;
@@ -72,7 +72,7 @@
 
 .list-inline {
     padding-left: 0;
-    margin-left: 542px;
+    margin-left: 552px;
     list-style: none;
     margin-top: 32px;
 }
@@ -87,7 +87,7 @@
     display: inline-block;
     padding: 6px 12px;
     margin-bottom: 0;
-    font-size: 14px;
+    font-size: 1.5em;
     font-weight: 400;
     line-height: 1.42857143;
     text-align: center;
@@ -116,12 +116,14 @@
 
 .btn-group-lg>.btn, .btn-lg {
     padding: 8px 16px;
-    font-size: 17px;
+    font-size: 1.5em;
     line-height: 1.33;
     border-radius: 6px;
 }
 
-
+.btn-default:hover{
+    background:#ccc;
+}
 
 
 
