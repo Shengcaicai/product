@@ -51,10 +51,11 @@
 
 .welcome{
     font-size: 39px;
-    text-align: center;
     margin-top: -463px;
     color: #fff;
+    text-align: center;
 }
+
 
 .intro{
     width: 400px;
@@ -62,9 +63,12 @@
     border-bottom: 1px solid #fff;
     position: relative;
     margin-top: 17px;
-    margin-left: 508px;
+    margin-left: 506px;
 }
 
+.row{
+    padding-top:10px;
+}
 
 .list-inline {
     padding-left: 0;
