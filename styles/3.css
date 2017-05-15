@@ -1,0 +1,29 @@
+
+.box{overflow:hidden;
+    zoom:1;
+    margin:10px auto;
+    padding:0 0 10px 10px;
+    width:248px;
+}
+
+
+
+.box ul{overflow:hidden;zoom:1;}
+
+
+
+.box li{
+    width: 40px;
+    height: 40px;
+    border: 1px solid #424242;
+    list-style-type: none;
+    margin: 0px 1px 0 0;
+    padding: 5px;
+    float: left;
+    text-align: center;
+}
+
+
+.box li:hover{
+    border:2px solid green;
+}
