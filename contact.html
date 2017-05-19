@@ -1,11 +1,169 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-    <p>contact</p>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>世界博物观</title>
+    <link href="styles/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap -->
 
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="styles/js/html5shiv.js"></script>
+    <script src="styles/js/respond.min.js"></script>
+    <![endif]-->
+
+    <style>
+        body{
+            padding-top:50px;
+        }
+
+        .carousel{
+            height:600px;
+            background-color:#000;
+        }
+
+
+        .carousel .item{
+            height:600px;
+            background-color:#000;
+        }
+
+        .carousel img{
+            width:100%;
+        }
+
+
+        .carousel-caption p{
+            font-size:20px;
+            margin-top:20px;
+            line-height:1.8;
+        }
+    </style>
+
+
+</head>
+
+<body>
+<!--导航按钮-->
+<nav class="navbar navbar-default navbar-fixed-top navbar-inverse" rol="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Sharyn</a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Show</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">About <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#">Action</a></li>
+                        <li><a href="#">Another action</a></li>
+                        <li><a href="#">Something else here</a></li>
+                        <li><a href="#">Separated link</a></li>
+                        <li><a href="#">One more separated link</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Trip</a></li>
+                <li><a href="#">photo</a></li>
+                <li><a href="#">contact</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+<!--轮播图-->
+<div id="ad-carousel" class="carousel slide" data-ride="carousel">
+    <!--小圆点-->
+    <ol class="carousel-indicators">
+        <li data-target="#ad-carousel" data-slide-to="0" class="active"></li>
+        <li data-target="#ad-carousel" data-slide-to="1"></li>
+        <li data-target="#ad-carousel" data-slide-to="2"></li>
+        <li data-target="#ad-carousel" data-slide-to="3"></li>
+        <li data-target="#ad-carousel" data-slide-to="4"></li>
+    </ol>
+
+
+    <!-- 图片 -->
+    <div class="carousel-inner">
+        <div class="item active">
+            <img src="styles/images/IMG_4448.JPG" alt="1 slide">
+
+            <div class="container">
+                <div class="carousel-caption">
+                    <h1>welcome</h1>
+                    <p>欢迎来到sharyn的个人网页</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="item">
+            <img src="styles/images/IMG_4455.JPG" alt="2 slide">
+
+            <div class="container">
+                <div class="carousel-caption">
+                    <h1>welcome</h1>
+                    <p>欢迎来到sharyn的个人网页</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="item">
+            <img src="styles/images/IMG_4443.JPG" alt="3 slide">
+
+            <div class="container">
+                <div class="carousel-caption">
+                    <h1>welcome</h1>
+                    <p>欢迎来到sharyn的个人网页</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="item">
+            <img src="styles/WechatIMG9.jpeg" alt="4 slide">
+
+            <div class="container">
+                <div class="carousel-caption">
+                    <h1>welcome</h1>
+                    <p>欢迎来到sharyn的个人网页</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="item">
+            <img src="styles/images/WechatIMG21.jpeg" alt="5 slide">
+
+            <div class="container">
+                <div class="carousel-caption">
+                    <h1>welcome</h1>
+                    <p>欢迎来到sharyn的个人网页</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- 左右箭头 -->
+    <a class="left carousel-control" href="#ad-carousel" data-slide="prev"><span
+            class="glyphicon glyphicon-chevron-left"></span></a>
+    <a class="right carousel-control" href="#ad-carousel" data-slide="next"><span
+            class="glyphicon glyphicon-chevron-right"></span></a>
+</div>
+
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="styles/js/jquery-1.11.1.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="styles/js/bootstrap.min.js"></script>
 </body>
 </html>
